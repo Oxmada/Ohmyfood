@@ -115,24 +115,28 @@
 
 .restaurants {
     background-color: #f6f6f6;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
     h2 {
         padding-top: 40px;
         margin-bottom: 15px;
-        margin-left: 15px;
-        margin-right: 15px;
     }
     .restaurants-cards {
         display: grid;
-        margin: 0 15px;
         gap: 15px;
         .restaurant-card {
             background-color: white;
             border-radius: 15px;
+            position: relative;
             .restaurant-image {
+                position: relative;
                 width: 100%;
                 height: 200px;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
+                object-fit: cover; 
+                z-index: 1;
             }
             .restaurant-card-description {
                 position: relative;
@@ -144,8 +148,32 @@
                 p {
                     font-size: 17px;
                     font-weight: lighter;
+                }  
+            }
+            .restaurant-card-notif {
+                position: absolute;
+                background-color: #99E2D0;
+                top: 10px; 
+                right: 10px; 
+                z-index: 10;
+                p {
+                    color:#008766;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 5px;
                 }
+            }
+            .restaurant-card-coeur {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                z-index: 10;
+                font-size: 22px;
             }
         }
     }
 }
+
+/* -----Footer-----*/
+
+@include components.footer;
