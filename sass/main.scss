@@ -1,3 +1,5 @@
-@use 'base/base';
-@use 'layout/layout';
-@use 'components/components'
+@use 'base/reset-typo.scss';
+@use 'base/footer.scss';
+@use 'components/button.scss';
+@use 'pages/home.scss';
+@use 'utils/mixins.scss';

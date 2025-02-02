@@ -1,17 +1,31 @@
-@use '../components/components';
+@use '../utils/mixins.scss';
+@use '../utils/variables.scss';
+@use '../utils/keyframes.scss';
 
-/* -----Header-----*/
-
-
-.logo {
+.loader-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: variables.$color-dark-blue;
+    position: fixed;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 63px;
-    img {
-        height: 30px;
+    animation: loader-opacity 2s 1s forwards;
+    .loader {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 10px solid #FFF;
+        border-top-color: variables.$color-light-blue;
+        animation: loader-rotation 3s linear
     }
 }
+
+.logo-header-home {
+    @include mixins.logo-header;
+}
+
 
 .form-location {
     display: flex;
@@ -41,14 +55,12 @@
 
 }
 
-/* -----Main-----*/
-
 .reservation-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin:auto;
+    padding-bottom: 40px;
     background-color: #f6f6f6;
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     h1 {
@@ -60,10 +72,7 @@
         width: 315px;
         margin-bottom: 25px;
     }
-    button {
-        @include components.pink-button;
-        margin-bottom: 30px;
-    }
+    
 }   
 
 .fonctionnement {
@@ -96,11 +105,16 @@
             justify-content: center;
             align-items: center;
             color: white;
-            background-color: #9356DC;  
+            background-color: variables.$color-purple;
         }
         .fonctionnement-step-icone {
             color: #7E7E7E;
             padding: 0 15px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: variables.$color-purple;
+            }
         }
         .fonctionnement-step-button {
             background-color: #F6F6F6;
@@ -130,7 +144,6 @@
             border-radius: 15px;
             position: relative;
             .restaurant-image {
-                position: relative;
                 width: 100%;
                 height: 200px;
                 border-top-left-radius: 15px;
@@ -152,28 +165,39 @@
             }
             .restaurant-card-notif {
                 position: absolute;
-                background-color: #99E2D0;
+                background-color: variables.$color-light-teal;
                 top: 10px; 
                 right: 10px; 
                 z-index: 10;
                 p {
-                    color:#008766;
+                    color: variables.$color-dark-teal;
                     font-size: 14px;
                     font-weight: 500;
                     padding: 5px;
                 }
             }
-            .restaurant-card-coeur {
-                position: absolute;
+            .heart-empty  {
                 right: 15px;
                 top: 15px;
-                z-index: 10;
-                font-size: 22px;
+                @include mixins.icone-heart-empty;
+                
+            }
+            .heart-full {
+                right: 14px; /* Ajuste de l'alignement car icone légèrement + grosse */
+                top: 14px;
+                @include mixins.icone-heart-full;
+                
+                
+            }
+            .checkbox-hidden {
+                right: 12px;
+                top: 13px;
+                @include mixins.checkbox-hidden;
+                &:checked + .heart-empty + .heart-full {
+                    opacity: 1;
+                }
+               
             }
         }
     }
 }
-
-/* -----Footer-----*/
-
-@include components.footer;

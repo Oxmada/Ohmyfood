@@ -1,0 +1,15 @@
+.pink-button {
+    border-radius: 25px;
+    background: linear-gradient(158deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    padding: 10px;
+    color: white;
+    font-family:"Roboto", sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    animation: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.85;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);  
+    }
+}

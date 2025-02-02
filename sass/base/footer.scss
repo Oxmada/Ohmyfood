@@ -1,0 +1,24 @@
+footer {
+    background-color: #353535;
+    padding: 20px;
+    color: white;
+    h2 {
+        font-family:"shrikhand";
+        font-weight: 400;
+        font-size: 18px;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+    p {
+        margin: 5px 0;
+    }
+    .footer-link a {
+        display: flex;
+        flex-direction: row;
+    }
+    i {
+        padding-right: 30px;
+        width: 13px;
+        height: 13px;
+    }
+}
