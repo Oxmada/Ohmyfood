@@ -52,7 +52,6 @@
         color: #353535;
         font-size: 16px;
     }
-
 }
 
 .reservation-menu {
@@ -71,6 +70,7 @@
     p {
         width: 315px;
         margin-bottom: 25px;
+        font-weight: 300;
     }
     
 }   
@@ -93,6 +93,13 @@
         padding: 20px;
         position: relative;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        animation: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+        opacity: 0.85;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);  
+    }
         .fonctionnement-step-numero {
             position: absolute;
             margin-left: -30px;
@@ -129,12 +136,9 @@
 
 .restaurants {
     background-color: #f6f6f6;
-    padding-bottom: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px 15px 60px;
     h2 {
-        padding-top: 40px;
-        margin-bottom: 15px;
+        padding-top: 40px 0 15px 0;
     }
     .restaurants-cards {
         display: grid;
@@ -183,11 +187,9 @@
                 
             }
             .heart-full {
-                right: 14px; /* Ajuste de l'alignement car icone légèrement + grosse */
+                right: 14px; /* Ajustement de l'alignement car icone légèrement + grosse */
                 top: 14px;
                 @include mixins.icone-heart-full;
-                
-                
             }
             .checkbox-hidden {
                 right: 12px;
@@ -201,3 +203,52 @@
         }
     }
 }
+
+/* -----Medias Queries-----*/
+
+@media (min-width: 1024px) {
+    
+    .form-location {
+        box-shadow: none;
+    }
+    .reservation-menu {
+        box-shadow: none;
+        padding-bottom: 20px;
+        h1 {
+            width: 100%;
+            margin: 20px 0 20px 0;
+        
+        }
+        p {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+    .fonctionnement {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 80px;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+        h2 {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .fonctionnement-step {
+            width: 32%;
+        }
+    }
+    .restaurants {
+        padding: 0 80px 30px 80px;
+        h2 {
+            padding: 20px 0;
+        }
+        .restaurants-cards  {
+            grid-template-columns: 47.5% 47.5%;
+            column-gap: 5%;
+            row-gap: 50px;
+        }
+    }
+}
+

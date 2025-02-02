@@ -12,13 +12,31 @@ footer {
     p {
         margin: 5px 0;
     }
-    .footer-link a {
-        display: flex;
-        flex-direction: row;
-    }
+   
     i {
         padding-right: 30px;
         width: 13px;
         height: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 60px 50px 10px 50px;
+        h2 {
+            margin-left: 80px;
+        }
+        .footer-link {
+            display: flex;
+            flex-direction: row;
+            p {
+                margin-left: 10px;
+            }
+            .mentions-legales {
+                margin-left: 50px;
+            }
+        }
     }
 }

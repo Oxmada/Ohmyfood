@@ -49,16 +49,32 @@ footer h2 {
 footer p {
   margin: 5px 0;
 }
-footer .footer-link a {
-  display: flex;
-  flex-direction: row;
-}
 footer i {
   padding-right: 30px;
   width: 13px;
   height: 13px;
 }
 
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 60px 50px 10px 50px;
+  }
+  footer h2 {
+    margin-left: 80px;
+  }
+  footer .footer-link {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .footer-link p {
+    margin-left: 10px;
+  }
+  footer .footer-link .mentions-legales {
+    margin-left: 50px;
+  }
+}
 .pink-button {
   border-radius: 25px;
   background: linear-gradient(158deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
@@ -165,6 +181,7 @@ footer i {
 .reservation-menu p {
   width: 315px;
   margin-bottom: 25px;
+  font-weight: 300;
 }
 
 .fonctionnement {
@@ -186,6 +203,12 @@ footer i {
   padding: 20px;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  animation: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.fonctionnement .fonctionnement-step:hover {
+  opacity: 0.85;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 .fonctionnement .fonctionnement-step .fonctionnement-step-numero {
   position: absolute;
@@ -220,13 +243,10 @@ footer i {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding-bottom: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 15px 60px;
 }
 .restaurants h2 {
-  padding-top: 40px;
-  margin-bottom: 15px;
+  padding-top: 40px 0 15px 0;
 }
 .restaurants .restaurants-cards {
   display: grid;
@@ -277,7 +297,7 @@ footer i {
   font-size: 22px;
 }
 .restaurants .restaurants-cards .restaurant-card .heart-full {
-  right: 14px; /* Ajuste de l'alignement car icone légèrement + grosse */
+  right: 14px; /* Ajustement de l'alignement car icone légèrement + grosse */
   top: 14px;
   position: absolute;
   font-size: 24px; /* Augmentation de la taille de l'icone par rapport à icone-heart-empty pour recouvrement parfait */
@@ -304,6 +324,51 @@ footer i {
 }
 .restaurants .restaurants-cards .restaurant-card .checkbox-hidden:checked + .heart-empty + .heart-full {
   opacity: 1;
+}
+
+/* -----Medias Queries-----*/
+@media (min-width: 1024px) {
+  .form-location {
+    box-shadow: none;
+  }
+  .reservation-menu {
+    box-shadow: none;
+    padding-bottom: 20px;
+  }
+  .reservation-menu h1 {
+    width: 100%;
+    margin: 20px 0 20px 0;
+  }
+  .reservation-menu p {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .fonctionnement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 80px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .fonctionnement h2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .fonctionnement .fonctionnement-step {
+    width: 32%;
+  }
+  .restaurants {
+    padding: 0 80px 30px 80px;
+  }
+  .restaurants h2 {
+    padding: 20px 0;
+  }
+  .restaurants .restaurants-cards {
+    grid-template-columns: 47.5% 47.5%;
+    column-gap: 5%;
+    row-gap: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
