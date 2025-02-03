@@ -72,7 +72,10 @@
         margin-bottom: 25px;
         font-weight: 300;
     }
-    
+    .reservation-pink-button {
+        padding: 10px;
+        @include mixins.pink-button;
+    }
 }   
 
 .fonctionnement {
@@ -136,9 +139,9 @@
 
 .restaurants {
     background-color: #f6f6f6;
-    padding: 0 15px 15px 60px;
+    padding: 0 15px 60px 15px;
     h2 {
-        padding-top: 40px 0 15px 0;
+        padding-top: 40px;
     }
     .restaurants-cards {
         display: grid;
@@ -164,7 +167,7 @@
                 }
                 p {
                     font-size: 17px;
-                    font-weight: lighter;
+                    font-weight: 300;
                 }  
             }
             .restaurant-card-notif {
@@ -180,7 +183,7 @@
                     padding: 5px;
                 }
             }
-            .heart-empty  {
+            .heart-empty {
                 right: 15px;
                 top: 15px;
                 @include mixins.icone-heart-empty;
@@ -198,7 +201,6 @@
                 &:checked + .heart-empty + .heart-full {
                     opacity: 1;
                 }
-               
             }
         }
     }

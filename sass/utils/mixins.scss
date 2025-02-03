@@ -1,8 +1,24 @@
+@mixin pink-button {
+    border-radius: 25px;
+    background: linear-gradient(158deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    color: white;
+    font-family:"Roboto", sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    animation: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.85;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);  
+    }
+}
+
 @mixin logo-header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 63px;
+    position: relative;
     img {
         height: 30px;
     }
@@ -15,7 +31,7 @@
 
 @mixin icone-heart-full {
     position: absolute;
-    font-size: 24px; /* Augmentation de la taille de l'icone par rapport à icone-heart-empty pour recouvrement parfait */
+    font-size: 24px; 
     opacity: 0;
     background: linear-gradient(360deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;

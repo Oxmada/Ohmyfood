@@ -1,0 +1,86 @@
+@use '../utils/mixins.scss';
+@use '../utils/variables.scss';
+
+.logo-header-restaurants {
+    @include mixins.logo-header;
+    i {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        font-size: 17px;
+    }
+}
+
+
+.restaurant-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 275px;
+}
+.background-menu {
+    position: relative;
+    background-color: #F6F6F6;
+    width: 100%;
+    .restaurant-title {
+        position: absolute;
+        background-color: #F6F6F6;
+        z-index: 2;
+        width: 100%;
+        top: -60px;
+        padding: 20px 0px 20px 20px;
+        border-radius: 30px 30px 0 0;
+        h1 {
+            font-size: 28px;
+            font-family:'Shrikhand';
+            font-weight: 400;
+            font-style: italic;
+        }
+        .empty-heart {
+            right: 50px;
+            top: 30px;
+            @include mixins.icone-heart-empty;
+        }
+        .full-heart {
+            right: 49px; 
+            top: 29px;
+            @include mixins.icone-heart-full;
+        }
+        .hidden-checkbox {
+            right: 46px;
+            top: 28px;
+            @include mixins.checkbox-hidden;
+            &:checked + .empty-heart + .full-heart {
+                opacity: 1;
+            }
+        }
+    }
+    .background-cards {
+        padding: 20px 20px 0px 20px;
+        .title-menu {
+            padding-bottom: 10px;
+            &::after {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: variables.$color-light-teal; 
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
+.order-button {
+    background-color:#F6F6F6;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    .order-pink-button {
+        @include mixins.pink-button;
+        padding: 15px 40px 15px 40px;
+    }
+}
+
+

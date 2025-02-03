@@ -1,0 +1,30 @@
+.container-cards-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 40px;
+    .card-menu {
+        position: relative;
+        background-color: white;
+        padding: 10px;
+        border-radius: 15px;
+        width: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+        data {
+            display: block;
+            position: absolute;
+            top: 22px;
+            right: 30px;
+            font-weight: bold;
+            font-weight: 18px;
+        }
+    }
+}

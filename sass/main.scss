@@ -1,5 +1,8 @@
+@use 'utils/variables.scss';
+@use 'utils/mixins.scss';
 @use 'base/reset-typo.scss';
 @use 'base/footer.scss';
-@use 'components/button.scss';
+@use 'components/buttons.scss';
+@use 'components/cards.scss';
 @use 'pages/home.scss';
-@use 'utils/mixins.scss';
+@use 'pages/restaurants.scss';
