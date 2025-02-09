@@ -17,3 +17,14 @@
         visibility: hidden; 
     }
 }
+
+@keyframes card-menu-appearance {
+    from {
+        transform: translatex(-2000px);
+        opacity: 0;
+    }
+    to {
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
