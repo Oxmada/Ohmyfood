@@ -86,7 +86,7 @@
             }
         }
     }
-    @for $i from 1 through 12 {   /* 9 + 3 (title entrées, plats & desserts) */  
+    @for $i from 1 through 13 {   /* 10 + 3 (title entrées, plats & desserts) */  
         .card-menu:nth-child(#{$i}) {
             animation-delay: #{$i * 0.25}s;
         }

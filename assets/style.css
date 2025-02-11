@@ -107,18 +107,19 @@ footer i {
   flex-wrap: wrap;
   gap: 12px;
   padding-bottom: 40px;
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
-  /* 9 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
+  /* 10 + 3 (title entrées, plats & desserts) */
 }
 @media (min-width: 768px) {
   .container-cards-menu {
@@ -234,6 +235,9 @@ footer i {
 }
 .container-cards-menu .card-menu:nth-child(12) {
   animation-delay: 3s;
+}
+.container-cards-menu .card-menu:nth-child(13) {
+  animation-delay: 3.25s;
 }
 
 .loader-container {
@@ -500,7 +504,13 @@ footer i {
     margin-bottom: 10px;
   }
   .fonctionnement .fonctionnement-step {
-    width: 32%;
+    width: 30%;
+  }
+  .fonctionnement .fonctionnement-step .fonctionnement-step-button {
+    font-size: 12px;
+  }
+  .fonctionnement .fonctionnement-step .fonctionnement-step-icone {
+    padding: 0 10px 0 10px;
   }
   .restaurants {
     padding: 0 80px 30px 80px;
@@ -576,9 +586,11 @@ footer i {
   font-weight: 400;
   font-style: italic;
 }
-.background-menu .restaurant-title .heart-button {
-  width: 50px;
-  position: relative;
+@media (min-width: 768px) {
+  .background-menu .restaurant-title .heart-button {
+    width: 50px;
+    position: relative;
+  }
 }
 .background-menu .restaurant-title .heart-button .empty-heart {
   right: 30px;

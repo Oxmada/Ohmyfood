@@ -237,7 +237,13 @@
             margin-bottom: 10px;
         }
         .fonctionnement-step {
-            width: 32%;
+            width: 30%;
+            .fonctionnement-step-button {
+                font-size: 12px;
+            }
+            .fonctionnement-step-icone {
+                padding: 0 10px 0 10px;
+            }
         }
     }
     .restaurants {
