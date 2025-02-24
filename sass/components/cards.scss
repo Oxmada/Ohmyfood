@@ -22,67 +22,65 @@
         }
     }
     .card-menu {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
         background-color: white;
-        padding: 15px;
         border-radius: 15px;
         width: 100%;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         opacity: 0;
         animation: card-menu-appearance 0.25s forwards;
-        &::after {
-            content: "";
-            position: absolute;
-            right: -60px;
-            top: 0;
-            width: 60px; 
-            height: 100%;  
-            background-color: variables.$color-light-teal;
-            border-radius: 0 15px 15px 0;
-            transition: right 0.3s ease-in-out;
-            z-index: 1;
+        .card-menu-content {
+            padding: 15px;
+            max-width: calc(100% - 45px);
+            transition: max-width 0.3s ease-in-out;
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            p {
+                font-size: 15px;
+                font-weight: 300;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
-        h3 {
-            font-size: 18px;
-            font-weight: 500;
+        .price-check {
+            display: flex;
+            align-items: center;
         }
-        p {
-            font-size: 15px;
-            font-weight: 300;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    
         data {
             display: block;
-            position: absolute;
-            bottom: 15px;
-            right: 30px;
+            margin-top: 15px;
             font-weight: bold;
             font-weight: 18px;
             transition: right 0.3s ease-in-out;
         }
         .circle-check {
-            position: absolute;
-            right: -60px;
-            top: 50%;
-            transform: translateY(-50%);
+            margin-left: 15px;
             color: white;
             font-size: 20px;
-            transition: right 0.3s ease-in-out;
-            z-index: 10;
+            transition: margin-right 0.3s ease-in-out;
+            margin-right: -60px;
+            width: 60px; 
+            height: 100%;  
+            background-color: variables.$color-light-teal;
+            border-radius: 0 15px 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         &:hover {
-            &::after {
-                right: 0;
-            }
             .circle-check {
-                right: 20px; 
+                margin-right: 0;
             }
-            data {
-                right: 80px;
+            .card-menu-content {
+                max-width: calc(100% - 105px);
             }
         }
     }

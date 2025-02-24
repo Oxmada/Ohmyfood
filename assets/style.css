@@ -139,9 +139,9 @@ footer i {
   margin-top: 5px;
 }
 .container-cards-menu .card-menu {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   background-color: white;
-  padding: 15px;
   border-radius: 15px;
   width: 100%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -149,56 +149,55 @@ footer i {
   opacity: 0;
   animation: card-menu-appearance 0.25s forwards;
 }
-.container-cards-menu .card-menu::after {
-  content: "";
-  position: absolute;
-  right: -60px;
-  top: 0;
-  width: 60px;
-  height: 100%;
-  background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  transition: right 0.3s ease-in-out;
-  z-index: 1;
+.container-cards-menu .card-menu .card-menu-content {
+  padding: 15px;
+  max-width: calc(100% - 45px);
+  transition: max-width 0.3s ease-in-out;
 }
-.container-cards-menu .card-menu h3 {
+.container-cards-menu .card-menu .card-menu-content h3 {
   font-size: 18px;
   font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.container-cards-menu .card-menu p {
+.container-cards-menu .card-menu .card-menu-content p {
   font-size: 15px;
   font-weight: 300;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+.container-cards-menu .card-menu .price-check {
+  display: flex;
+  align-items: center;
+}
 .container-cards-menu .card-menu data {
   display: block;
-  position: absolute;
-  bottom: 15px;
-  right: 30px;
+  margin-top: 15px;
   font-weight: bold;
   font-weight: 18px;
   transition: right 0.3s ease-in-out;
 }
 .container-cards-menu .card-menu .circle-check {
-  position: absolute;
-  right: -60px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: 15px;
   color: white;
   font-size: 20px;
-  transition: right 0.3s ease-in-out;
-  z-index: 10;
-}
-.container-cards-menu .card-menu:hover::after {
-  right: 0;
+  transition: margin-right 0.3s ease-in-out;
+  margin-right: -60px;
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-cards-menu .card-menu:hover .circle-check {
-  right: 20px;
+  margin-right: 0;
 }
-.container-cards-menu .card-menu:hover data {
-  right: 80px;
+.container-cards-menu .card-menu:hover .card-menu-content {
+  max-width: calc(100% - 105px);
 }
 .container-cards-menu .card-menu:nth-child(1) {
   animation-delay: 0.25s;
@@ -243,7 +242,7 @@ footer i {
 .loader-container {
   width: 100vw;
   height: 100vh;
-  background-color: #003A68;
+  background-color: #353535;
   position: fixed;
   z-index: 100;
   display: flex;
