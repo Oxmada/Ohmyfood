@@ -196,7 +196,7 @@
             }
             .checkbox-hidden {
                 right: 12px;
-                top: 13px;
+                bottom: 20px;
                 @include mixins.checkbox-hidden;
                 &:checked + .heart-empty + .heart-full {
                     opacity: 1;

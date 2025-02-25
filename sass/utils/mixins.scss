@@ -3,6 +3,7 @@
     background: linear-gradient(158deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     color: white;
     font-family:"Roboto", sans-serif;
+    font-size: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     animation: all 0.3s ease-in-out;
     cursor: pointer;
@@ -49,7 +50,7 @@
 
 @mixin checkbox-hidden {
     width: 22px;
-    z-index: 10;
+    z-index: 15;
     height: 22px;
     position: absolute;
     opacity: 0;
