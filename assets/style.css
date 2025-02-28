@@ -394,6 +394,7 @@ footer i {
 }
 .restaurants h2 {
   padding-top: 40px;
+  padding-bottom: 20px;
 }
 .restaurants .restaurants-cards {
   display: grid;
