@@ -1,21 +1,20 @@
-## Projet_2
-🎯 Objectif
-Créer un site web mobile first, dynamique et responsive sur mobile, tablette & desktop
+![Logo Ohmyfood](assets/images/logo/ohmyfood.png)
 
-## 🔧 Stack technique
-HTML
-SASS
-## ⛩️ Structure du projet
-Un fichier index.html pour la page d'acceuil du site
+---
 
-Un dossier restaurants contenant un fichier html pour chacun des restaurants
+## 🍽️ Projet Ohmyfood
+Réalisation d'un site web mobile first, dynamique et responsive sur mobile, tablette & desktop qui répertorie les menus de restaurants gastronomiques.
 
-Un dossier Sass contenant les dossiers base, components, pages, utils et un fichier main.scss
+---
 
-Base = footer, reset, typographie
+## 📥 Installation
+Aucune installation ou dépendance nécessaire. Il suffit de cloner le dépôt et de commencer à l'utiliser.
 
-Components = cards
+---
 
-Pages = page d'acceuil & pages restaurants
+## 🔗 Liens utiles
 
-Utils = Keyframes, mixins & variables
+| 🌐 **Version hébergée**                        | 🎨 **Maquette Figma**                              |
+|-----------------------------------------------|--------------------------------------------------|
+| [Voir en ligne](https://oxmada.github.io/Projet_2/) | [Accéder à la maquette](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1) |
+
