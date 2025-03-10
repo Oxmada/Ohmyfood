@@ -16,5 +16,5 @@ Aucune installation ou dépendance nécessaire. Il suffit de cloner le dépôt e
 
 | 🌐 **Version hébergée**                        | 🎨 **Maquette Figma**                              |
 |-----------------------------------------------|--------------------------------------------------|
-| [Voir en ligne](https://oxmada.github.io/Projet_2/) | [Accéder à la maquette](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1) |
+| [Voir en ligne](https://oxmada.github.io/Ohmyfood/) | [Accéder à la maquette](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1) |
 
